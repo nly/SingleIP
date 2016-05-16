@@ -7,7 +7,7 @@
 
 local _M = {}
 
-_M.filepath = "/Users/leandre/Opensource/geoip/GeoLite2-City.mmdb";
+_M.filepath = "/Users/leandre/Opensource/SingleIP/GeoLite2-City.mmdb";
 
 _M.geodb = nil;
 

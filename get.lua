@@ -6,13 +6,8 @@ local args = ngx.req.get_uri_args()
 local ip_str = args.ip
 
 if ip_str == nil or ip_str == "" then
-    ngx.say(cjson.encode({
-        code = 400,
-        msg = "empty ip"
-    }))
-    ngx.exit(ngx.HTTP_OK)
+    ip_str = ngx.var.remote_addr
 end
-
 
 local ip_table = conf.lua_string_split(",", ip_str);
 local geodb = conf.geodb
